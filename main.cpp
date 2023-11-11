@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 void reverseArray(int arr[], int size) {
     int start = 0;
@@ -18,19 +19,19 @@ int main() {
     const int size = 5;
     int array[size] = { 1, 2, 3, 4, 5 };
 
-    std::cout << "Original Array: ";
+    cout << "Original Array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << array[i] << " ";
+    cout << array[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     reverseArray(array, size);
 
-    std::cout << "Reversed Array: ";
+    cout << "Reversed Array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << array[i] << " ";
+       cout << array[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
