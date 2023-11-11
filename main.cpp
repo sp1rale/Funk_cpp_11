@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 
 int findMax(const int arr[], int size) {
@@ -48,23 +49,23 @@ int findMax(int a, int b, int c) {
 int main() {
     int arr1D[] = { 1, 5, 3, 8, 2 };
     int max1D = findMax(arr1D, 5);
-    std::cout << "Max in 1D array: " << max1D << std::endl;
+    cout << "Max in 1D array: " << max1D << endl;
 
     int arr2D[][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
     int max2D = findMax(arr2D, 3, 3);
-    std::cout << "Max in 2D array: " << max2D << std::endl;
+    cout << "Max in 2D array: " << max2D << endl;
 
     int arr3D[][3][3] = { {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
                          {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}},
                          {{19, 20, 21}, {22, 23, 24}, {25, 26, 27}} };
     int max3D = findMax(arr3D, 3, 3, 3);
-    std::cout << "Max in 3D array: " << max3D << std::endl;
+    cout << "Max in 3D array: " << max3D << endl;
 
     int maxOfTwo = findMax(10, 5);
-    std::cout << "Max of two integers: " << maxOfTwo << std::endl;
+    cout << "Max of two integers: " << maxOfTwo << endl;
 
     int maxOfThree = findMax(3, 9, 6);
-    std::cout << "Max of three integers: " << maxOfThree << std::endl;
+    cout << "Max of three integers: " << maxOfThree << endl;
 
     return 0;
 }
