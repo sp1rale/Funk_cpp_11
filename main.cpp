@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 struct MinMaxResult {
     int minValue;
@@ -9,7 +10,7 @@ struct MinMaxResult {
 
 MinMaxResult findMinMax(const int arr[], int size) {
     if (size <= 0) {
-        std::cerr << "Invalid array size." << std::endl;
+        cerr << "Invalid array size." << endl;
         return { 0, -1, 0, -1 };  
     }
     int minValue = arr[0];
@@ -37,8 +38,8 @@ int main() {
 
     MinMaxResult result = findMinMax(array, size);
 
-    std::cout << "Min Value: " << result.minValue << " at index " << result.minIndex << std::endl;
-    std::cout << "Max Value: " << result.maxValue << " at index " << result.maxIndex << std::endl;
+    cout << "Min Value: " << result.minValue << " at index " << result.minIndex << endl;
+    cout << "Max Value: " << result.maxValue << " at index " << result.maxIndex << endl;
 
     return 0;
 }
