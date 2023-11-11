@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <algorithm>
 
+using namespace std;
+
 void initializeMatrix(int matrix[][3], int size) {
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
@@ -13,9 +15,9 @@ void initializeMatrix(int matrix[][3], int size) {
 void displayMatrix(const int matrix[][3], int size) {
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
-            std::cout << std::setw(4) << matrix[i][j];
+            cout << setw(4) << matrix[i][j];
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 }
 
@@ -35,7 +37,7 @@ void diagonalMinMax(const int matrix[][3], int size, int& maxDiagonal, int& minD
 
 void sortRows(int matrix[][3], int size) {
     for (int i = 0; i < size; ++i) {
-        std::sort(matrix[i], matrix[i] + size);
+        sort(matrix[i], matrix[i] + size);
     }
 }
 
@@ -44,16 +46,16 @@ int main() {
     int matrix[size][3];
 
     initializeMatrix(matrix, size);
-    std::cout << "Original Matrix:" << std::endl;
-    displayMatrix(matrix, size);
+    cout << "Original Matrix:" << endl;
 
+    displayMatrix(matrix, size);
     int maxDiagonal, minDiagonal;
     diagonalMinMax(matrix, size, maxDiagonal, minDiagonal);
-    std::cout << "\nMax Diagonal Element: " << maxDiagonal << std::endl;
-    std::cout << "Min Diagonal Element: " << minDiagonal << std::endl;
+    cout << "\nMax Diagonal Element: " << maxDiagonal << endl;
+    cout << "Min Diagonal Element: " << minDiagonal << endl;
 
     sortRows(matrix, size);
-    std::cout << "\nMatrix After Sorting Rows:" << std::endl;
+    cout << "\nMatrix After Sorting Rows:" << endl;
     displayMatrix(matrix, size);
 
     return 0;
